@@ -3,6 +3,7 @@ from libs import embed, dataloader
 import re, os
 
 SAVE_LOC = 'saveloc'
+RETRIEVE_QUOTE_CONFIG_LOC = 'addons/quotes/SaveQuote.config'
 
 class Command(command.Config):
     '''Retrieves saved quotes
@@ -12,8 +13,8 @@ To display message with ID <message id>
 ```<message id>```
 Where
 **`<message id>`** is the ID of a saved message '''
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, config=None,**kwargs):
+        super().__init__(config=RETRIEVE_QUOTE_CONFIG_LOC,**kwargs)
         self.saveloc = self.config[SAVE_LOC]
 
     def matches(self, message):
