@@ -9,7 +9,9 @@ class Reaction(reactioncommand.ReactionAddCommand, reactioncommand.Config):
 
 **Usage**
 React to the message you want to be saved with the save emoji
-(The emoji is server-defined; ask your fellow server members for the correct emoji)'''
+(The emoji is server-defined; ask your fellow server members for the correct emoji)
+
+To retrieve a saved quote, include the id of the saved message in your message.'''
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.saveloc = self.config[SAVE_LOC]

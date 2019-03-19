@@ -3,7 +3,7 @@ from libs import embed, dataloader
 import re, os
 
 SAVE_LOC = 'saveloc'
-RETRIEVE_QUOTE_CONFIG_LOC = 'addons/quotes/SaveQuote.config'
+RETRIEVE_QUOTE_CONFIG_LOC = 'addons/quotes/savequote.config'
 
 class Command(command.Config):
     '''Retrieves saved quotes
